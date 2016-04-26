@@ -24,31 +24,31 @@ if ( ! empty( $children ) ) {
     $cat_posts = new WP_Query($cat_args);
 ?>
 
-<?php
+    <?php
     if ( $cat_posts->have_posts() ) {
-?>
+    ?>
   <li><a href="<?php echo get_category_link($category); ?>"><?php echo $category->name; ?></a>
     <ul>
-<?php
+      <?php
       while( $cat_posts->have_posts() ) {
         $cat_posts->the_post();
-?>
+      ?>
       <li><a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a></li>
 
-<?php
+      <?php
       }
-    } else {
-?>
-<?php
-    }
-?>
+      ?>
     </ul>
   </li>
-<?php
+  <?php
+    }
+  ?>
+  <?php
   }
 } else {
 ?>
   <article class="u-alert"><?php _e('Sorry, no posts matched your criteria :{'); ?></article>
 <?php
-} ?>
+}
+?>
 </ul>

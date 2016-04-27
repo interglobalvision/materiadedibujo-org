@@ -55,11 +55,19 @@
 
   <!-- start content -->
   <header id="header" class="container margin-bottom-basic">
-    <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-
-    <?php
-      if (is_single() || is_category('investigacion')) {
-        get_template_part('partials/investigacion-menu');
-      }
-    ?>
+    <div class="row">
+      <div class="col col-6">
+        <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+        <ul id="menu">
+          <li><h3><a href="<?php echo home_url('category/investigacion/'); ?>">Investigación</a></h3></li>
+          <li><h3><a href="<?php echo home_url('acerca/'); ?>">Acerca</a></h3></li>
+        </ul>
+      </div>
+      <div class="col col-6">
+      <?php
+        if (is_single() || is_category('investigacion')) {
+          get_template_part('partials/investigacion-menu');
+        }
+      ?>
+      </div>
   </header>

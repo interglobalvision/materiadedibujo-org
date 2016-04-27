@@ -28,13 +28,13 @@ if ( ! empty( $children ) ) {
     if ( $cat_posts->have_posts() ) {
     ?>
 <!--   <li><h2><a href="<?php echo get_category_link($category); ?>"><?php echo $category->name; ?></a></h2> -->
-    <li><h2><?php echo $category->name; ?></h2>
+    <li><h3><?php echo $category->name; ?></h3>
     <ul>
       <?php
       while( $cat_posts->have_posts() ) {
         $cat_posts->the_post();
       ?>
-      <li><h3><a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a></h3></li>
+      <li><h4><a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a></h4></li>
 
       <?php
       }

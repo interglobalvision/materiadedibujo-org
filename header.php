@@ -59,7 +59,7 @@
 
     <?php
       if (is_single() || is_category('investigacion')) {
-        get_template_part('partials/research-index');
+        get_template_part('partials/investigacion-menu');
       }
     ?>
   </header>

@@ -4,10 +4,10 @@ get_header();
 
 <!-- main content -->
 
-<main id="main-content">
+<main id="main-content" class="container">
 
   <!-- main posts loop -->
-  <section id="posts">
+  <section id="posts" class="row">
 
 <?php
 if( have_posts() ) {
@@ -15,9 +15,11 @@ if( have_posts() ) {
     the_post();
 ?>
 
-    <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+    <article <?php post_class('col col-12'); ?> id="post-<?php the_ID(); ?>">
 
-      <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+      <?php if (!is_page()) { ?>
+      <a href="<?php the_permalink() ?>"><h3 class="margin-bottom-small"><?php the_title(); ?></h3></a>
+      <?php } ?>
 
       <?php the_content(); ?>
 
@@ -27,7 +29,7 @@ if( have_posts() ) {
   }
 } else {
 ?>
-    <article class="u-alert"><?php _e('Sorry, no posts matched your criteria :{'); ?></article>
+    <article class="col col-12 u-alert"><?php _e('Sorry, no posts matched your criteria :{'); ?></article>
 <?php
 } ?>
 

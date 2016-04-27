@@ -76,8 +76,8 @@ $font-size-h2 = golden-ratio(1rem , 1.5)
 $font-size-h1 = golden-ratio(1rem , 2)
 
 
-$font-leading-basic = 1.35em
-$font-leading-larger = 1.45em
+$font-leading-basic = 1.35
+$font-leading-larger = 1.45
 
 $font-tracking-basic = 0.001em
 $font-tracking-wider = 0.05em
@@ -92,8 +92,11 @@ $color-white-soft = rgb(253, 253, 253)
 html
   font-family: font-stack('Helvetica')
   font-size: $font-size-basic
-  line-height: $font-leading-basic
   letter-spacing: $font-tracking-basic
+
+body
+  line-height: $font-leading-basic
+
 
   // HTML ELEMENT STYLING
 
@@ -144,7 +147,10 @@ a,
 a:active,
 a:visited
   color: inherit
-  text-decoration: none
+  text-decoration: underline
+  &:hover
+    text-decoration: none
+
 
 // ******************************************************
 
@@ -257,6 +263,6 @@ img
 
   @import "responsive/desktop-mid"
 
-@media screen and (max-width: 601px)
+@media screen and (max-width: 1056px)
 
   @import "responsive/mobile"

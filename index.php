@@ -4,7 +4,7 @@ get_header();
 
 <!-- main content -->
 
-<main id="main-content">
+<main id="main-content" class="container">
 
   <!-- main posts loop -->
   <section id="posts">
@@ -17,7 +17,7 @@ if( have_posts() ) {
 
     <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-      <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+      <a href="<?php the_permalink() ?>"><h3><?php the_title(); ?></h3></a>
 
       <?php the_content(); ?>
 

@@ -54,7 +54,7 @@
   <section id="main-container">
 
   <!-- start content -->
-  <header id="header">
+  <header id="header" class="container margin-bottom-basic">
     <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
 
     <?php

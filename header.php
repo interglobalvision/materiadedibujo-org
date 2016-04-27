@@ -59,8 +59,11 @@
       <div class="col col-6">
         <h2><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h2>
         <ul id="menu">
-          <li><h4><a href="<?php echo home_url('category/investigacion/'); ?>">Investigación</a></h4></li>
-          <li><h4><a href="<?php echo home_url('acerca/'); ?>">Acerca</a></h4></li>
+          <li><h4><a href="<?php echo home_url('laboratorio'); ?>">Laboratorio</a></h4></li>
+          <li><h4><a href="<?php echo home_url('expos/'); ?>">Expos</a></h4></li>
+          <li><h4><a href="<?php echo home_url('talleres/'); ?>">Talleres</a></h4></li>
+          <li><h4><a href="<?php echo home_url('textos/'); ?>">Textos</a></h4></li>
+          <li><h4><a href="<?php echo home_url('contacto/'); ?>">Contacto</a></h4></li>
         </ul>
       </div>
       <div class="col col-6">

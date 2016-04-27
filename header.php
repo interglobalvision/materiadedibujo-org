@@ -66,7 +66,7 @@
       <div class="col col-6">
       <?php
         if (is_single() || is_category('investigacion')) {
-          get_template_part('partials/investigacion-menu');
+          laboratorio_index();
         }
       ?>
       </div>

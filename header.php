@@ -56,4 +56,10 @@
   <!-- start content -->
   <header id="header">
     <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+
+    <?php
+      if (is_single() || is_category('investigacion')) {
+        get_template_part('partials/research-index');
+      }
+    ?>
   </header>

@@ -2,9 +2,8 @@
 
 function get_laboratorio_index() {
   $output = '';
-  $research_cat = get_category_by_slug('investigacion');
+  $research_cat = get_category_by_slug('laboratorio');
   $children = get_categories( array (
-    'taxonomy' => 'category',
     'child_of' => $research_cat->term_id,
     'order'    => 'ASC',
   ) );

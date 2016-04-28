@@ -24,7 +24,7 @@ function get_laboratorio_index() {
       $cat_posts = new WP_Query($cat_args);
 
       if ( $cat_posts->have_posts() ) {
-        $output .= '<li>' . $category->name . '<ul>';
+        $output .= '<li><strong>' . $category->name . '</strong><ul>';
 
         while( $cat_posts->have_posts() ) {
           $cat_posts->the_post();

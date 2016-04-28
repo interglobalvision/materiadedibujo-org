@@ -7,7 +7,6 @@ function get_laboratorio_index() {
     'taxonomy' => 'category',
     'child_of' => $research_cat->term_id,
     'order'    => 'ASC',
-    'posts_per_page' => 1,
   ) );
 
   // We itarate thru each children of Investigacion

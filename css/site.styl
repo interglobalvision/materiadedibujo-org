@@ -151,10 +151,7 @@ a,
 a:active,
 a:visited
   color: inherit
-  text-decoration: underline
-  &:hover
-    text-decoration: none
-
+  text-decoration: none
 
 // ******************************************************
 
@@ -254,7 +251,20 @@ img
 
 // ******************************************************
 
+// HEADER
+#menu
+  list-style: none
 
+  li
+    display: inline-block
+    margin-right: $margin-tiny
+
+    a:after
+      content: ','
+
+  li:last-child
+    a:after
+      content: ''
 
 
 

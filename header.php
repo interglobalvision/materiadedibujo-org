@@ -54,10 +54,9 @@
   <section id="main-container">
 
   <!-- start content -->
-  <header id="header" class="container margin-top-small margin-bottom-basic">
+  <header id="header" class="container margin-top-basic margin-bottom-mid">
     <div class="row">
-      <div class="col col-6">
-        <h2><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h2>
+      <div class="col col-10">
         <ul id="menu">
           <li><h4><a href="<?php echo home_url('laboratorio'); ?>">Laboratorio</a></h4></li>
           <li><h4><a href="<?php echo home_url('expos/'); ?>">Expos</a></h4></li>
@@ -66,11 +65,7 @@
           <li><h4><a href="<?php echo home_url('contacto/'); ?>">Contacto</a></h4></li>
         </ul>
       </div>
-      <div class="col col-6">
-      <?php
-        if (is_single() || is_category('investigacion')) {
-          laboratorio_index();
-        }
-      ?>
+      <div class="col col-2">
+        <a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/img/dist/logo.jpg'; ?>"></a>
       </div>
   </header>

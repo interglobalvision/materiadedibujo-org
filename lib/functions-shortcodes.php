@@ -34,6 +34,9 @@ function get_laboratorio_index() {
       }
     }
     $output .= '</ul>';
+
+    wp_reset_postdata();
+
     return $output;
   }
 }

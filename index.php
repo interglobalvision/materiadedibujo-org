@@ -13,15 +13,42 @@ get_header();
 if( have_posts() ) {
   while( have_posts() ) {
     the_post();
+
+    // Get columns content
+    $right_column = apply_filters( 'the_content', get_post_meta( $post->ID, '_igv_right_column', true ) );
+    $left_column = apply_filters( 'the_content', get_post_meta( $post->ID, '_igv_left_column', true ) );
+
 ?>
 
-    <article <?php post_class('col col-12'); ?> id="post-<?php the_ID(); ?>">
-
+    <article id="post-<?php the_ID(); ?>">
       <?php if (!is_page()) { ?>
       <a href="<?php the_permalink() ?>"><h3 class="margin-bottom-small"><?php the_title(); ?></h3></a>
       <?php } ?>
 
-      <?php the_content(); ?>
+
+      <?php 
+      if( ! empty($right_column) ) {
+      ?>
+        <div class="sidebar col col-3">
+
+        <?php echo $right_column; ?> 
+
+        <?php
+        if (is_single() && in_cat_ancestor_of('laboratorio')) {
+          laboratorio_index(); 
+        }
+        ?>
+
+        </div>
+      <?php } ?>
+
+      <div class="col col-5">
+        <?php the_content(); ?>
+      </div>
+
+      <?php if( ! empty($left_column) ) { ?>
+        <div class="sidebar col col-3"><?php echo $left_column; ?></div> 
+      <?php } ?>
 
     </article>
 

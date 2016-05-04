@@ -39,5 +39,33 @@ function igv_cmb_metaboxes() {
    * Reference: https://github.com/WebDevStudios/CMB2/blob/master/example-functions.php
 	 */
 
+  $columns_metaboxes = new_cmb2_box( array(
+    'id'            => $prefix . 'metabox',
+    'title'         => __( 'Columnas', 'cmb2' ),
+    'object_types'  => array( 'page', 'post' ), // Post type
+    // 'show_on_cb' => 'yourprefix_show_if_front_page', // function should return a bool value
+    // 'context'    => 'normal',
+    // 'priority'   => 'high',
+    // 'show_names' => true, // Show field names on the left
+    // 'cmb_styles' => false, // false to disable the CMB stylesheet
+    // 'closed'     => true, // true to keep the metabox closed by default
+  ) );
+
+  $columns_metaboxes->add_field( array(
+    'name'    => __( 'Columna derecha', 'cmb2' ),
+    'desc'    => __( '', 'cmb2' ),
+    'id'      => $prefix . 'right_column',
+    'type'    => 'wysiwyg',
+    'options' => array( 'textarea_rows' => 10, ),
+  ) );
+
+  $columns_metaboxes->add_field( array(
+    'name'    => __( 'Columna izquierda', 'cmb2' ),
+    'desc'    => __( '', 'cmb2' ),
+    'id'      => $prefix . 'left_column',
+    'type'    => 'wysiwyg',
+    'options' => array( 'textarea_rows' => 10, ),
+  ) );
+
 }
 ?>

@@ -47,7 +47,7 @@ if( have_posts() ) {
       </div>
 
       <?php if( ! empty($right_column) ) { ?>
-        <div class="sidebar col col-3"><?php echo !empty( $right_column ) ? $right_column : ''; ?></div> 
+        <div class="sidebar col col-3"><?php echo $right_column; ?></div> 
       <?php } ?>
 
     </article>

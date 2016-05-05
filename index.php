@@ -27,11 +27,11 @@ if( have_posts() ) {
 
 
       <?php 
-      if( ! empty($right_column) ) {
+      if( !empty( $left_column ) || ( is_single() && in_cat_ancestor_of( 'laboratorio' ) )  ) {
       ?>
         <div class="sidebar col col-3">
 
-        <?php echo $right_column; ?> 
+        <?php echo $left_column; ?> 
 
         <?php
         if (is_single() && in_cat_ancestor_of('laboratorio')) {
@@ -46,8 +46,8 @@ if( have_posts() ) {
         <?php the_content(); ?>
       </div>
 
-      <?php if( ! empty($left_column) ) { ?>
-        <div class="sidebar col col-3"><?php echo $left_column; ?></div> 
+      <?php if( ! empty($right_column) ) { ?>
+        <div class="sidebar col col-3"><?php echo $right_column; ?></div> 
       <?php } ?>
 
     </article>

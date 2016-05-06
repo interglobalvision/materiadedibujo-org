@@ -58,11 +58,11 @@
     <div class="row">
       <div class="col col-10">
         <ul id="menu">
-          <li><h4><a href="<?php echo home_url('laboratorio'); ?>">Laboratorio</a></h4></li>
-          <li><h4><a href="<?php echo home_url('expos/'); ?>">Expos</a></h4></li>
-          <li><h4><a href="<?php echo home_url('talleres/'); ?>">Talleres</a></h4></li>
-          <li><h4><a href="<?php echo home_url('textos/'); ?>">Textos</a></h4></li>
-          <li><h4><a href="<?php echo home_url('contacto/'); ?>">Contacto</a></h4></li>
+          <li><h3><a href="<?php echo home_url('laboratorio'); ?>">Laboratorio</a></h3></li>
+          <li><h3><a href="<?php echo home_url('expos/'); ?>">Expos</a></h3></li>
+          <li><h3><a href="<?php echo home_url('talleres/'); ?>">Talleres</a></h3></li>
+          <li><h3><a href="<?php echo home_url('textos/'); ?>">Textos</a></h3></li>
+          <li><h3><a href="<?php echo home_url('contacto/'); ?>">Contacto</a></h3></li>
         </ul>
       </div>
       <div class="col col-2">

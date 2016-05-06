@@ -22,22 +22,22 @@ if( have_posts() ) {
 
     <article id="post-<?php the_ID(); ?>">
       <?php if (!is_page()) { ?>
-      <a href="<?php the_permalink() ?>"><h3 class="margin-bottom-small"><?php the_title(); ?></h3></a>
+      <a href="<?php the_permalink() ?>"><h3 class="margin-bottom-small font-bold"><?php the_title(); ?></h3></a>
       <?php } ?>
 
 
-      <?php 
+      <?php
       if( !empty( $left_column ) || ( is_single() && in_cat_ancestor_of( 'laboratorio' ) )  ) {
       ?>
-        <div class="sidebar col col-3">
-          
+        <div class="sidebar col col-3 font-smaller">
+
         <?php
         if (is_single() && in_cat_ancestor_of('laboratorio')) {
-          laboratorio_index(); 
+          laboratorio_index();
         }
         ?>
 
-        <?php echo !empty( $left_column ) ? $left_column : '' ; ?> 
+        <?php echo !empty( $left_column ) ? $left_column : '' ; ?>
 
         </div>
       <?php } ?>
@@ -47,7 +47,7 @@ if( have_posts() ) {
       </div>
 
       <?php if( ! empty($right_column) ) { ?>
-        <div class="sidebar col col-3"><?php echo $right_column; ?></div> 
+        <div class="sidebar col col-3 font-smaller"><?php echo $right_column; ?></div>
       <?php } ?>
 
     </article>

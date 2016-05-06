@@ -30,14 +30,14 @@ if( have_posts() ) {
       if( !empty( $left_column ) || ( is_single() && in_cat_ancestor_of( 'laboratorio' ) )  ) {
       ?>
         <div class="sidebar col col-3">
-
-        <?php echo !empty( $left_column ) ? $left_column : '' ; ?> 
-
+          
         <?php
         if (is_single() && in_cat_ancestor_of('laboratorio')) {
           laboratorio_index(); 
         }
         ?>
+
+        <?php echo !empty( $left_column ) ? $left_column : '' ; ?> 
 
         </div>
       <?php } ?>

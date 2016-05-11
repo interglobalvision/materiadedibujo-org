@@ -57,6 +57,9 @@ function igv_cmb_metaboxes() {
     'id'      => $prefix . 'right_column',
     'type'    => 'wysiwyg',
     'options' => array( 'textarea_rows' => 10, ),
+    'options' => array(
+      'editor_class' => 'cmb2-qtranslate'
+    )
   ) );
 
   $columns_metaboxes->add_field( array(
@@ -65,6 +68,9 @@ function igv_cmb_metaboxes() {
     'id'      => $prefix . 'left_column',
     'type'    => 'wysiwyg',
     'options' => array( 'textarea_rows' => 10, ),
+    'options' => array(
+      'editor_class' => 'cmb2-qtranslate'
+    )
   ) );
 
 }

@@ -58,11 +58,24 @@
     <div class="row">
       <div class="col col-10">
         <ul id="menu">
-          <li><h3><a href="<?php echo home_url('laboratorio'); ?>">Laboratorio</a></h3></li>
-          <li><h3><a href="<?php echo home_url('expos/'); ?>">Expos</a></h3></li>
-          <li><h3><a href="<?php echo home_url('talleres/'); ?>">Talleres</a></h3></li>
-          <li><h3><a href="<?php echo home_url('textos/'); ?>">Textos</a></h3></li>
-          <li><h3><a href="<?php echo home_url('contacto/'); ?>">Contacto</a></h3></li>
+          <li><h3><a href="<?php echo home_url('laboratorio'); ?>"><?php echo __('[:es]Laboratorio[:en]Laboratory'); ?></a></h3></li>
+          <li><h3><a href="<?php echo home_url('expos/'); ?>"><?php echo __('[:es]Expos[:en]Expos'); ?></a></h3></li>
+          <li><h3><a href="<?php echo home_url('talleres/'); ?>"><?php echo __('[:es]Talleres[:en]Workshops'); ?></a></h3></li>
+          <li><h3><a href="<?php echo home_url('textos/'); ?>"><?php echo __('[:es]Textos[:en]Texts'); ?></a></h3></li>
+          <li><h3><a href="<?php echo home_url('contacto/'); ?>"><?php echo __('[:es]Contacto[:en]Contact'); ?></a></h3></li>
+          <?php
+            if (is_404()) {
+              $url = get_option('home');
+            } else {
+              $url = '';
+            }
+
+            if (qtranxf_getLanguage() == 'es') {
+              echo '<li><h3><a href="' . qtranxf_convertURL($url, 'en', false, true) . '">in English</a></h3></li>';
+            } else {
+              echo '<li><h3><a href="' . qtranxf_convertURL($url, 'es', false, true) . '">en Español</a></h3></li>';
+            }
+          ?>
         </ul>
       </div>
       <div class="col col-2">

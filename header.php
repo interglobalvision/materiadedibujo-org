@@ -59,9 +59,9 @@
       <div class="col col-10">
         <ul id="menu">
           <li><h3><a href="<?php echo home_url('laboratorio'); ?>"><?php echo __('[:es]Laboratorio[:en]Laboratory'); ?></a></h3></li>
-          <li><h3><a href="<?php echo home_url('expos/'); ?>"><?php echo __('[:es]Expos[:en]Expos'); ?></a></h3></li>
-          <li><h3><a href="<?php echo home_url('talleres/'); ?>"><?php echo __('[:es]Talleres[:en]Workshops'); ?></a></h3></li>
-          <li><h3><a href="<?php echo home_url('textos/'); ?>"><?php echo __('[:es]Textos[:en]Texts'); ?></a></h3></li>
+          <li><h3><a href="<?php echo home_url('/category/exposiciones/'); ?>"><?php echo __('[:es]Expos[:en]Expos'); ?></a></h3></li>
+          <li><h3><a href="<?php echo home_url('/category/talleres/'); ?>"><?php echo __('[:es]Talleres[:en]Workshops'); ?></a></h3></li>
+          <li><h3><a href="<?php echo home_url('/category/textos/'); ?>"><?php echo __('[:es]Textos[:en]Texts'); ?></a></h3></li>
           <li><h3><a href="<?php echo home_url('contacto/'); ?>"><?php echo __('[:es]Contacto[:en]Contact'); ?></a></h3></li>
           <?php
             if (is_404()) {

@@ -54,7 +54,7 @@
   <section id="main-container">
 
   <!-- start content -->
-  <header id="header" class="container margin-top-basic margin-bottom-mid">
+  <header id="header" class="container margin-top-basic">
     <div class="row">
       <div class="col col-10">
         <ul id="menu">

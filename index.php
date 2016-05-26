@@ -14,7 +14,7 @@ $category_text = category_description();
 if (!empty($category_text)) {
 ?>
 
-    <div class="sidebar col col-3 font-smaller">
+    <div class="sidebar col col-3 text-copy font-smaller">
       <?php echo $category_text; ?>
     </div>
 
@@ -22,7 +22,7 @@ if (!empty($category_text)) {
 }
 ?>
 
-    <div class="col col5">
+    <div class="col col5 text-copy">
 
 <?php
 if( have_posts() ) {

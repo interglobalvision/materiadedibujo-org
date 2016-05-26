@@ -10,7 +10,7 @@ function get_laboratorio_index() {
 
   // We itarate thru each children of Investigacion
   if ( ! empty( $children ) ) {
-    $output .= '<ul class="research-index margin-bottom-small">';
+    $output .= '<ul class="research-index font-leading-wider margin-bottom-small">';
     foreach ( $children as $category ) {
 
       // On each one we retrive all its posts
@@ -23,7 +23,7 @@ function get_laboratorio_index() {
       $cat_posts = new WP_Query($cat_args);
 
       if ( $cat_posts->have_posts() ) {
-        $output .= '<li><strong>' . $category->name . '</strong><ul>';
+        $output .= '<li><strong>' . $category->name . '</strong><ul class="margin-bottom-small">';
 
         while( $cat_posts->have_posts() ) {
           $cat_posts->the_post();

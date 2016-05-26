@@ -37,12 +37,12 @@ if( have_posts() ) {
         </div>
       <?php } ?>
 
-      <div class="col col-5">
+      <div class="col col-5 text-copy">
         <?php the_content(); ?>
       </div>
 
       <?php if( ! empty($right_column) ) { ?>
-        <div class="sidebar col col-3 font-smaller"><?php echo $right_column; ?></div>
+        <div class="sidebar col col-3 text-copy font-smaller"><?php echo $right_column; ?></div>
       <?php } ?>
 
     </article>

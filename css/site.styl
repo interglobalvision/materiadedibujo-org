@@ -12,8 +12,8 @@ normalize()
 // GRID
 
 $cols = 12
-$col = 88px
-$gutter = 18px
+$col = 84px
+$gutter = 22px
 
 .container
   margin: 0 auto
@@ -65,9 +65,9 @@ $golden-ratio = 1.61803398875
 $margin-small = ($gutter)
 $margin-tiny = ($gutter / 2)
 $margin-micro = ($gutter / (2 * $golden-ratio))
-$margin-basic = ($gutter * 2)
-$margin-mid = ($gutter * 3.5)
-$margin-large = ($gutter * 5)
+$margin-basic = golden-ratio($gutter , 1.3)
+$margin-mid = golden-ratio($gutter , 2.3)
+$margin-large = golden-ratio($gutter , 3.5)
 
 $font-size-basic = 16px
 $font-size-larger = 1.3rem
@@ -77,8 +77,8 @@ $font-size-h2 = golden-ratio(1rem , 1.3)
 $font-size-h1 = golden-ratio(1rem , 1.8)
 
 
-$font-leading-basic = 1.45
-$font-leading-larger = 1.6
+$font-leading-basic = 1.5
+$font-leading-larger = 1.65
 
 $font-tracking-basic = 0.001em
 $font-tracking-wider = 0.05em
@@ -127,10 +127,13 @@ p
 .font-smaller
   font-size: $font-size-smaller
 
-.font-italic
+.font-leading-wider
+  line-height: $font-leading-larger
+
+.font-italic, em, i
   font-style: italic
 
-.font-bold
+.font-bold, strong, b
   font-weight: bold
 
 .font-small-caps
@@ -154,6 +157,26 @@ p
 .text-align-center
   text-align: center
 
+  // LISTS
+
+ul
+  margin-bottom: 1rem
+  line-height: $font-leading-larger
+
+  // COPY
+
+.text-copy
+  img
+    margin: $margin-small 0
+  .aligncenter
+    margin: $margin-small auto
+  h3,
+  h4,
+  h5,
+  h6
+    margin-bottom: 1rem
+
+
   // LINKS
 
 a,
@@ -173,6 +196,9 @@ html
 img
   max-width: 100%
   height: auto
+
+#main-content
+  margin-bottom: $margin-large
 
 // ******************************************************
 

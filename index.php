@@ -22,7 +22,7 @@ if (!empty($category_text)) {
 }
 ?>
 
-    <div class="col col5">
+    <div class="col col5 text-copy">
 
 <?php
 if( have_posts() ) {

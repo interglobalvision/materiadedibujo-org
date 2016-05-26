@@ -79,6 +79,6 @@
         </ul>
       </div>
       <div class="col col-2">
-        <a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/img/dist/logo.jpg'; ?>"></a>
+        <a href="<?php echo home_url(); ?>"><img height="64" src="<?php echo get_stylesheet_directory_uri() . '/img/dist/logo.jpg'; ?>"></a>
       </div>
   </header>

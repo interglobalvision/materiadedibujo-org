@@ -72,7 +72,7 @@ $margin-large = ($gutter * 5)
 $font-size-basic = 16px
 $font-size-larger = 1.3rem
 $font-size-smaller = .8rem
-$font-size-h3 = golden-ratio(1rem , 1)
+$font-size-h3 = 25px
 $font-size-h2 = golden-ratio(1rem , 1.3)
 $font-size-h1 = golden-ratio(1rem , 1.8)
 
@@ -261,6 +261,14 @@ img
 // ******************************************************
 
 // HEADER
+
+#header
+  margin-bottom: $margin-mid
+
+.single
+  #header
+    margin-bottom: $margin-mid - ($font-size-h3 * $font-leading-basic) - $margin-small
+
 #menu
   list-style: none
   li

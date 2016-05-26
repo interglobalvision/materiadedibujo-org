@@ -54,7 +54,7 @@
   <section id="main-container">
 
   <!-- start content -->
-  <header id="header" class="container margin-top-basic margin-bottom-mid">
+  <header id="header" class="container margin-top-basic">
     <div class="row">
       <div class="col col-10">
         <ul id="menu">
@@ -79,6 +79,6 @@
         </ul>
       </div>
       <div class="col col-2">
-        <a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/img/dist/logo.jpg'; ?>"></a>
+        <a href="<?php echo home_url(); ?>"><img height="64" src="<?php echo get_stylesheet_directory_uri() . '/img/dist/logo.jpg'; ?>"></a>
       </div>
   </header>

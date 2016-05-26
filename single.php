@@ -26,7 +26,7 @@ if( have_posts() ) {
       <?php
       if( !empty( $left_column ) || ( is_single() && in_cat_ancestor_of( 'laboratorio' ) )  ) {
       ?>
-        <div class="sidebar col col-3 text-copy font-smaller">
+        <div class="sidebar col col-3 font-smaller">
 
         <?php
         if (is_single() && in_cat_ancestor_of('laboratorio')) {

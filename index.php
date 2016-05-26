@@ -14,7 +14,7 @@ $category_text = category_description();
 if (!empty($category_text)) {
 ?>
 
-    <div class="sidebar col col-3 text-copy font-smaller">
+    <div class="sidebar col col-3 font-smaller">
       <?php echo $category_text; ?>
     </div>
 

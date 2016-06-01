@@ -56,9 +56,9 @@ function igv_cmb_metaboxes() {
     'desc'    => __( '', 'cmb2' ),
     'id'      => $prefix . 'right_column',
     'type'    => 'wysiwyg',
-    'options' => array( 'textarea_rows' => 10, ),
     'options' => array(
-      'editor_class' => 'cmb2-qtranslate'
+      'editor_class' => 'cmb2-qtranslate',
+      'textarea_rows' => 10, 
     )
   ) );
 
@@ -67,10 +67,47 @@ function igv_cmb_metaboxes() {
     'desc'    => __( '', 'cmb2' ),
     'id'      => $prefix . 'left_column',
     'type'    => 'wysiwyg',
-    'options' => array( 'textarea_rows' => 10, ),
     'options' => array(
-      'editor_class' => 'cmb2-qtranslate'
+      'editor_class' => 'cmb2-qtranslate',
+      'textarea_rows' => 10, 
     )
+  ) );
+
+
+  $links_metaboxes = new_cmb2_box( array(
+    'id'            => $prefix . 'metabox',
+    'title'         => __( 'Meta', 'cmb2' ),
+    'object_types'  => array( 'post' ), // Post type
+    // 'show_on_cb' => 'yourprefix_show_if_front_page', // function should return a bool value
+    // 'context'    => 'normal',
+    // 'priority'   => 'high',
+    // 'show_names' => true, // Show field names on the left
+    // 'cmb_styles' => false, // false to disable the CMB stylesheet
+    // 'closed'     => true, // true to keep the metabox closed by default
+  ) );
+  
+  $links_group = $links_metaboxes->add_field( array(
+    'id'      => $prefix . 'external_links',
+    'type'    => 'group',
+    'description' => __( 'Campo usado para generar indice de links externos' ),
+    'options' => array(
+      'group_title' => __( 'Link {#}', 'cmb2' ),
+      'add_button' => __( 'Agregar otro link', 'cmb2' ),
+      'remove_button' => __( 'Eliminar link', 'cmb2' ),
+      'sortable'      => true, // beta
+    )
+  ) );
+
+  $links_metaboxes->add_group_field( $links_group,  array(
+    'name' => 'Dirección',
+    'id' => 'link_address',
+    'type' => 'text_url'
+  ) );
+
+  $links_metaboxes->add_group_field( $links_group,  array(
+    'name' => 'Texto',
+    'id' => 'link_text',
+    'type' => 'text'
   ) );
 
 }

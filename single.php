@@ -18,6 +18,8 @@ if( have_posts() ) {
     $right_column = apply_filters( 'the_content', get_post_meta( $post->ID, '_igv_right_column', true ) );
     $left_column = apply_filters( 'the_content', get_post_meta( $post->ID, '_igv_left_column', true ) );
 
+    $external_links = get_post_meta( $post->ID, '_igv_external_links', true );
+
 ?>
 
     <article id="post-<?php the_ID(); ?>">
@@ -48,8 +50,21 @@ if( have_posts() ) {
         <?php the_content(); ?>
       </div>
 
-      <?php if( ! empty($right_column) ) { ?>
-        <div class="sidebar col col-3 text-copy font-smaller"><?php echo $right_column; ?></div>
+      <?php if( ! empty($right_column) || ! empty($external_links) ) { ?>
+        <div class="sidebar col col-3 text-copy font-smaller">
+        <?php 
+        echo $right_column;
+
+        if( ! empty( $external_links ) ) {
+        ?>
+          <ul class="external-links-index font-leading-wider margin-bottom-small">
+          <?php
+          foreach( $external_links as $link ) {
+            echo '<li><a href="' . $link['link_address'] . '" target="_blank">' . $link['link_text'] . '</a></li>';
+          }
+        }
+        ?>
+        </div>
       <?php } ?>
       </div>
     </article>

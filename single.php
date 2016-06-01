@@ -52,12 +52,13 @@ if( have_posts() ) {
 
       <?php if( ! empty($right_column) || ! empty($external_links) ) { ?>
         <div class="sidebar col col-3 text-copy font-smaller">
-        <?php 
+        <?php
         echo $right_column;
 
         if( ! empty( $external_links ) ) {
         ?>
           <ul class="external-links-index font-leading-wider margin-bottom-small">
+            <li class="font-bold">Links</li>
           <?php
           foreach( $external_links as $link ) {
             echo '<li><a href="' . $link['link_address'] . '" target="_blank">' . $link['link_text'] . '</a></li>';

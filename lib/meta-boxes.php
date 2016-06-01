@@ -107,7 +107,11 @@ function igv_cmb_metaboxes() {
   $links_metaboxes->add_group_field( $links_group,  array(
     'name' => 'Texto',
     'id' => 'link_text',
-    'type' => 'text'
+    'type' => 'text',
+    'class=' => 'cmb2',
+    'attributes' => array(
+      'class' => 'cmb2-qtranslate'
+    )
   ) );
 
 }

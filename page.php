@@ -7,7 +7,7 @@ get_header();
 <main id="main-content" class="container">
 
   <!-- main posts loop -->
-  <section id="posts" class="row">
+  <section id="posts">
 
 <?php
 if( have_posts() ) {
@@ -21,6 +21,13 @@ if( have_posts() ) {
 ?>
 
     <article id="post-<?php the_ID(); ?>">
+      <div class="row">
+        <div class="col col-12">
+          <a href="<?php the_permalink() ?>"><h3 class="margin-bottom-small font-bold"><?php the_title(); ?></h3></a>
+        </div>
+      </div>
+
+      <div class="row">
       <?php
       if( !empty( $left_column ) || ( is_single() && in_cat_ancestor_of( 'laboratorio' ) )  ) {
       ?>
@@ -45,6 +52,7 @@ if( have_posts() ) {
         <div class="sidebar col col-3 text-copy font-smaller"><?php echo $right_column; ?></div>
       <?php } ?>
 
+      </div>
     </article>
 
 <?php

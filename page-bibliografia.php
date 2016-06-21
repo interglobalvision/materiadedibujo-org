@@ -7,7 +7,7 @@ get_header();
 <main id="main-content" class="container">
 
   <!-- main posts loop -->
-  <section id="posts">
+  <section id="posts" class="row">
 
 <?php
 if( have_posts() ) {
@@ -17,19 +17,11 @@ if( have_posts() ) {
 ?>
 
     <article id="post-<?php the_ID(); ?>">
-      <div class="row">
-        <div class="col col-12">
-          <a href="<?php the_permalink() ?>"><h3 class="margin-bottom-small font-bold"><?php the_title(); ?></h3></a>
-        </div>
-      </div>
-
-      <div class="row">
 
         <div class="col col-12 text-copy">
           <?php the_content(); ?>
         </div>
 
-      </div>
     </article>
 
 <?php

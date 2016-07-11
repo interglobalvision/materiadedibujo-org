@@ -1,14 +1,174 @@
 // ******************************************************
 
-// GRID
+// VARIABLES
 
-$cols = 12
-$col = 74px
 $gutter = 14px
 
+$margin-small = ($gutter)
+$margin-tiny = ($gutter / 2)
+$margin-micro = ($gutter / (2 * $golden-ratio))
+$margin-basic = golden-ratio($gutter , 1.3)
+$margin-mid = golden-ratio($gutter , 2.3)
+$margin-large = golden-ratio($gutter , 3.5)
+
+$font-size-basic = 14px
+$font-size-larger = 1.3rem
+$font-size-smaller = .9rem
+
+$font-size-h3 = 1.2rem
+
+// ******************************************************
+
 .container
-  width: 96%
+  width: 94%
+  max-width: 600px
 
 .col
   width: 100%
   float: none
+  margin-left: 0
+  margin-right: 0
+
+// ******************************************************
+
+// TYPOGRAPHY
+
+html
+  font-size: $font-size-basic
+
+  // HTML ELEMENT STYLING
+
+h3
+  font-size: $font-size-h3
+
+h4
+  font-size: $font-size-larger
+
+  // FONT RULES
+
+.font-larger
+  font-size: $font-size-larger
+
+.font-smaller
+  font-size: $font-size-smaller
+
+.font-small-caps
+  font-size: 0.85em
+
+// ******************************************************
+
+// BASIC
+
+#main-content
+  margin-bottom: $margin-small
+
+.only-desktop
+  display: none
+
+.only-mobile
+  display: initial
+
+// ******************************************************
+
+// MARGINS AND PADDING
+
+  // MARGIN TOP
+
+.margin-top-micro
+  margin-top: $margin-micro
+
+.margin-top-tiny
+  margin-top: $margin-tiny
+
+.margin-top-small
+  margin-top: $margin-small
+
+.margin-top-basic
+  margin-top: $margin-basic
+
+.margin-top-mid
+  margin-top: $margin-mid
+
+.margin-top-large
+  margin-top: $margin-large
+
+  // MARGIN BOTTOM
+
+.margin-bottom-micro
+  margin-bottom: $margin-micro
+
+.margin-bottom-tiny
+  margin-bottom: $margin-tiny
+
+.margin-bottom-small
+  margin-bottom: $margin-small
+
+.margin-bottom-basic
+  margin-bottom: $margin-basic
+
+.margin-bottom-mid
+  margin-bottom: $margin-mid
+
+.margin-bottom-large
+  margin-bottom: $margin-large
+
+  // PADDING TOP
+
+.padding-top-micro
+  padding-top: $margin-micro
+
+.padding-top-tiny
+  padding-top: $margin-tiny
+
+.padding-top-small
+  padding-top: $margin-small
+
+.padding-top-basic
+  padding-top: $margin-basic
+
+.padding-top-mid
+  padding-top: $margin-mid
+
+.padding-top-large
+  padding-top: $margin-large
+
+  // PADDING BOTTOM
+
+.padding-bottom-micro
+  padding-bottom: $margin-micro
+
+.padding-bottom-tiny
+  padding-bottom: $margin-tiny
+
+.padding-bottom-small
+  padding-bottom: $margin-small
+
+.padding-bottom-basic
+  padding-bottom: $margin-basic
+
+.padding-bottom-mid
+  padding-bottom: $margin-mid
+
+.padding-bottom-large
+  padding-bottom: $margin-large
+
+// ******************************************************
+
+// HEADER
+
+#header
+  margin-top: $margin-small
+  margin-bottom: $margin-basic
+
+.single
+  #header
+    margin-bottom: $margin-mid - ($font-size-h3 * $font-leading-basic) - $margin-small
+
+#mobile-logo
+  width: 70%
+  max-width: 300px
+
+#menu
+  margin-top: $margin-micro
+  li
+    margin-right: $margin-micro

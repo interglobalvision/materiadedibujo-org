@@ -57,6 +57,7 @@
   <header id="header" class="container margin-top-basic">
     <div class="row">
       <div class="col col-10">
+        <a href="<?php echo home_url(); ?>"><img id="mobile-logo" class="only-mobile" height="64" src="<?php echo get_stylesheet_directory_uri() . '/img/dist/logo.jpg'; ?>"></a>
         <ul id="menu">
           <li><h3><a href="<?php echo home_url('laboratorio'); ?>"><?php echo __('[:es]Laboratorio[:en]Laboratory'); ?></a></h3></li>
           <li><h3><a href="<?php echo home_url('/category/exposiciones/'); ?>"><?php echo __('[:es]Expos[:en]Expos'); ?></a></h3></li>
@@ -78,7 +79,7 @@
           ?>
         </ul>
       </div>
-      <div class="col col-2">
-        <a href="<?php echo home_url(); ?>"><img height="64" src="<?php echo get_stylesheet_directory_uri() . '/img/dist/logo.jpg'; ?>"></a>
+      <div class="col col-2 only-desktop">
+        <a href="<?php echo home_url(); ?>"><img id="header-logo" height="64" src="<?php echo get_stylesheet_directory_uri() . '/img/dist/logo.jpg'; ?>"></a>
       </div>
   </header>

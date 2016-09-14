@@ -35,7 +35,7 @@ function get_laboratorio_index() {
     }
 
     // Add link to bibliography
-    $bibliography = get_page_by_title('bibliografia');
+    $bibliography = get_page_by_path('laboratorio/bibliografia');
     $output.= '<li><a href="' . get_permalink($bibliography->ID)  . '"><strong>' . __('[:es]Bibliografía[:en]Bibliography') . '</a></strong></li>';
 
     $output .= '</ul>';

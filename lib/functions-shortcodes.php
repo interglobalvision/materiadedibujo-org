@@ -33,6 +33,11 @@ function get_laboratorio_index() {
         $output .= '</ul></li>';
       }
     }
+
+    // Add link to bibliography
+    $bibliography = get_page_by_title('bibliografia');
+    $output.= '<li><a href="' . get_permalink($bibliography->ID)  . '"><strong>[:es]Bibliografía[:en]Bibliography</a></strong></li>';
+
     $output .= '</ul>';
 
     wp_reset_postdata();
